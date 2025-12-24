@@ -1,49 +1,92 @@
-# 🚀 Apache Kafka Real-Time Data Pipeline
+# Apache Kafka
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-2.8+-black?logo=apachekafka)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
-
-> **Özet:** Bu proje, yüksek hacimli verileri gerçek zamanlı olarak işlemek, dönüştürmek ve analiz etmek için tasarlanmış ölçeklenebilir bir **Apache Kafka** ekosistemidir.
+Apache Kafka, gerçek zamanlı veri akışı (event streaming) için kullanılan dağıtık bir mesajlaşma sistemidir.  
+Büyük ölçekli ve yüksek hızlı veri iletimini güvenli ve performanslı şekilde sağlar.
 
 ---
 
-## 📋 İçindekiler
+## Apache Kafka Nedir?
 
-- [Proje Hakkında](#-proje-hakkında)
-- [Mimari](#-mimari)
-- [Özellikler](#-özellikler)
-- [Gereksinimler](#-gereksinimler)
-- [Kurulum](#-kurulum)
-- [Kullanım](#-kullanım)
-- [Yapılandırma](#-yapılandırma)
-- [Katkıda Bulunma](#-katkıda-bulunma)
-- [Lisans](#-lisans)
+Apache Kafka, producer ve consumer mantığıyla çalışan, verileri topic’ler üzerinden ileten açık kaynaklı bir platformdur.  
+Özellikle gerçek zamanlı sistemlerde, mikroservis mimarilerinde ve log toplama işlemlerinde kullanılır.
 
 ---
 
-## 📖 Proje Hakkında
+## Kafka Ne Zaman Kullanılır?
 
-Bu repo, dağıtık sistemlerde veri tutarlılığını sağlamak ve olay tabanlı (event-driven) mimarileri desteklemek amacıyla geliştirilmiştir. **Producer** servisleri veriyi üretir, **Kafka Broker** kümeleri veriyi güvenle saklar ve **Consumer** grupları veriyi işleyerek [Hedef Veritabanı/Servis]'e yazar.
-
-### Kullanılan Teknolojiler
-* **Core:** Apache Kafka, Zookeeper
-* **Backend:** [Python / Java / Go - Burayı Düzenle]
-* **Containerization:** Docker & Docker Compose
-* **Veritabanı:** [PostgreSQL / MongoDB / Elasticsearch - Burayı Düzenle]
+- Gerçek zamanlı veri akışı gerektiğinde  
+- Mikroservisler arası iletişimde  
+- Log ve event toplama sistemlerinde  
+- Büyük veri (Big Data) pipeline’larında  
+- Bildirim ve mesajlaşma sistemlerinde  
 
 ---
 
-## 🏗 Mimari
+## Kafka’nın Temel Bileşenleri
 
-Sistemin veri akış diyagramı aşağıdadır:
+### Producer
+Veriyi Kafka’ya gönderen uygulamadır.
 
-```mermaid
-graph LR
-    A[📡 Data Source / API] -->|JSON Logs| B(🚀 Producer Service)
-    B -->|Topic: logs-stream| C{🔥 Apache Kafka Cluster}
-    C -->|Group: analytics| D(⚙️ Consumer A - Analytics)
-    C -->|Group: storage| E(💾 Consumer B - DB Writer)
-    D --> F[📊 Dashboard]
-    E --> G[(🗄️ Database)]
+### Consumer
+Kafka’dan veriyi okuyan uygulamadır.
+
+### Broker
+Kafka sunucusudur. Veriler broker’lar üzerinde saklanır.
+
+### Topic
+Verilerin gönderildiği mantıksal kanaldır.
+
+### Partition
+Topic’lerin parçalara bölünmüş halidir. Performans ve paralellik sağlar.
+
+### Zookeeper / KRaft
+Kafka cluster yönetimi için kullanılır. Yeni sürümlerde KRaft tercih edilir.
+
+---
+
+## Kafka Nasıl Çalışır?
+
+1. Producer mesajı Kafka’ya gönderir  
+2. Mesaj ilgili topic’e yazılır  
+3. Broker mesajı diskte saklar  
+4. Consumer mesajı topic’ten okur  
+
+---
+
+## Kafka’nın Avantajları
+
+- Yüksek performanslıdır  
+- Yatay olarak ölçeklenebilir  
+- Veri kaybına karşı dayanıklıdır  
+- Gerçek zamanlı veri işleyebilir  
+
+---
+
+## Kafka’nın Dezavantajları
+
+- Kurulumu ve yönetimi karmaşıktır  
+- Öğrenme süresi uzundur  
+- Sistem kaynaklarını fazla tüketebilir  
+
+---
+
+## Basit Kafka Mimarisi
+
+Producer → Topic → Broker → Consumer
+
+---
+
+## Kullanım Alanları
+
+- Finans sistemleri  
+- E-ticaret uygulamaları  
+- Log izleme sistemleri  
+- IoT projeleri  
+- Veri analizi platformları  
+
+---
+
+## Sonuç
+
+Apache Kafka, büyük ve gerçek zamanlı veri işleyen sistemler için güçlü ve ölçeklenebilir bir çözümdür.  
+Doğru senaryoda kullanıldığında sistem performansını ciddi şekilde artırır.
