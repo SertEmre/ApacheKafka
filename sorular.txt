@@ -1,0 +1,100 @@
+APACHE KAFKA –  ÇOKTAN SEÇMELİ SORULAR
+
+1) Apache Kafka’nın temel amacı aşağıdakilerden hangisidir?
+A) Dosya transferi yapmak
+B) Veritabanı işlemlerini yönetmek
+C) Gerçek zamanlı veri akışı sağlamak
+D) Grafik arayüzlü uygulamalar geliştirmek
+E) İşletim sistemi hizmetleri sunmak
+
+Doğru Cevap: C
+
+
+2) Kafka mimarisinde veriyi Kafka’ya gönderen bileşen hangisidir?
+A) Consumer
+B) Broker
+C) Topic
+D) Producer
+E) Partition
+
+Doğru Cevap: D
+
+
+3) Kafka’da veriyi Kafka’dan okuyan bileşen hangisidir?
+A) Producer
+B) Broker
+C) Partition
+D) Topic
+E) Consumer
+
+Doğru Cevap: E
+
+
+4) Kafka’da verilerin mantıksal olarak tutulduğu yapı hangisidir?
+A) Broker
+B) Cluster
+C) Consumer Group
+D) Topic
+E) Partition
+
+Doğru Cevap: D
+
+
+5) Kafka’da performansı ve paralelliği artıran yapı hangisidir?
+A) Topic
+B) Zookeeper
+C) Partition
+D) Broker
+E) Consumer
+
+Doğru Cevap: C
+
+
+6) Kafka Broker’ın temel görevi aşağıdakilerden hangisidir?
+A) Mesaj üretmek
+B) Mesaj tüketmek
+C) Mesajları saklamak ve iletmek
+D) Mesajları şifrelemek
+E) Mesajları filtrelemek
+
+Doğru Cevap: C
+
+
+7) Kafka’da bir topic’ten mesaj okuyan consumer’ların oluşturduğu yapı nedir?
+A) Topic Group
+B) Broker Group
+C) Partition Group
+D) Consumer Group
+E) Cluster Group
+
+Doğru Cevap: D
+
+
+8) Kafka hangi senaryolar için daha uygundur?
+A) Küçük masaüstü uygulamaları
+B) Tek kullanıcılı sistemler
+C) Gerçek zamanlı ve yüksek hacimli veri sistemleri
+D) Statik web siteleri
+E) Oyun motorları
+
+Doğru Cevap: C
+
+
+9) Kafka cluster yönetimi için kullanılan yapı hangisidir?
+A) MySQL
+B) Redis
+C) Elasticsearch
+D) Zookeeper / KRaft
+E) PostgreSQL
+
+Doğru Cevap: D
+
+
+10) Kafka’nın en önemli avantajlarından biri aşağıdakilerden hangisidir?
+A) Kolay kurulum
+B) Düşük bellek kullanımı
+C) Görsel arayüz sunması
+D) Yüksek ölçeklenebilirlik
+E) Düşük gecikme olmaması
+
+Doğru Cevap: D
